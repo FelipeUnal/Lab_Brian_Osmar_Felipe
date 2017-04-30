@@ -38,6 +38,16 @@ public class Inventario {
         
     }
     
+    public void BuscarProducto(Producto p){
+        if(this.productos.containsKey(p.getNombre())){
+            System.out.println("");
+            System.out.println("- "+p.getNombre()+" : "+p.getPesoUni()+" Kg/L, "+p.getCantidad()+" unidades, "+p.ExistenciaTotal()+" Kg/L");
+            System.out.println("");
+        }else{
+            System.out.println("- El producto que esta buscando no esta registrado.");
+        }
+    }
+    
     public void ListadeProductos(){
         System.out.println("");
         System.out.println("Lista de productos : "+this.Arr.getNombre()+" - "+this.Arr.getCiudad());
