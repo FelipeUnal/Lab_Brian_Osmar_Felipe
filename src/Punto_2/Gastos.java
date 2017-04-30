@@ -7,7 +7,7 @@ public class Gastos {
     private Establecimientos arriendo;
     private Empleados empleados;
 
-    public Gastos(Impuestos impuestos, Establecimientos arriendo, Empleados empleados) {
+    public Gastos(Impuestos impuestos, Establecimientos arriendo, Empleados empleados){
         this.impuestos = impuestos;
         this.arriendo = arriendo;
         this.empleados = empleados;
