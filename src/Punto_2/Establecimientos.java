@@ -23,6 +23,10 @@ public class Establecimientos {
         
     }
     
+    public void removeArriendo(Arriendo a){
+        this.sedes.remove(a.getDireccion());
+    }
+    
     public void ListadeProductos(){
         System.out.println("");
         System.out.println("Lista de establecimientos :");

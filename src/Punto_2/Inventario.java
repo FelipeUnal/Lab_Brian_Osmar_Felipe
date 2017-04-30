@@ -55,7 +55,13 @@ public class Inventario {
                 System.out.println("¡No hay tal cantidad existente!");
                 System.out.println(" La cantidad existente es "+this.productos.getOrDefault(p.getNombre(), p).getCantidad()+" unidades de "+this.productos.getOrDefault(p.getNombre(), p).getPesoUni()+" Kg/L.");
                 System.out.println("");
-            }else{ 
+            }else if(a==this.productos.getOrDefault(p.getNombre(), p).getCantidad()){ 
+                this.productos.getOrDefault(p.getNombre(), p).setCantidad(this.productos.getOrDefault(p.getNombre(), p).getCantidad()-a);
+                System.out.println("");
+                System.out.println("Salidas de productos :");
+                System.out.println("- "+p.getNombre()+" : "+a+" unidades de "+p.getPesoUni()+" Kg/L.");
+                System.out.println("Las existencias se han agotado.");
+            }else{
                 this.productos.getOrDefault(p.getNombre(), p).setCantidad(this.productos.getOrDefault(p.getNombre(), p).getCantidad()-a);
                 System.out.println("");
                 System.out.println("Salidas de productos :");

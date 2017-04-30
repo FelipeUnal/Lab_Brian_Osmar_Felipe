@@ -20,6 +20,10 @@ public class Arriendo {
     public void AddService(int a, Servicio s){
         this.servicios[a] = s;
     }
+    
+    public void removeService(int a){
+        this.servicios[a] = null;
+    }
 
     public Servicio[] getServicios() {
         return servicios;
@@ -76,6 +80,9 @@ public class Arriendo {
         System.out.println(" ");
         System.out.println("Lista de Servicios : " + this.Nombre+" - "+this.Ciudad);
         for (int i = 0; i < this.servicios.length; i++) {
+            if(this.servicios[i]==null){
+                System.out.println("- Un servicio ha sido retirado!");
+            }
             System.out.println("- "+this.servicios[i].getNombre()+" : $ "+this.servicios[i].getCosto());
         }
         System.out.println("Total :  $ "+CostodeServ());

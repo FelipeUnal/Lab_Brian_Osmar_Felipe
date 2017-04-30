@@ -12,6 +12,10 @@ public class Impuestos {
         impuesto.add(Impuesto);
     }
     
+    public void retirarImp(Impuesto Impuesto){
+        impuesto.remove(Impuesto);
+    }
+    
     public void ListadeImpuetos(){
         System.out.println("");
         System.out.println("Lista de Impuestos :");
